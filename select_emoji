@@ -1,6 +1,6 @@
 #!/bin/bash
 tail -n +5 "$0" | dmenu -i -l 20 | cut -d\  -f1 - | sed -z "s/\n//g" | xclip -i -selection clipboard
-exit
+<<EOF
 
 😀 Grinning Face
 😃 Grinning Face with Big Eyes
@@ -835,3 +835,4 @@ exit
 🔘 Radio Button
 🔳 White Square Button
 🔲 Black Square Button
+EOF
