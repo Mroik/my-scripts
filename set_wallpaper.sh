@@ -18,4 +18,9 @@ else
 	rm "/home/mroik/Pictures/lock2.jpg"
 	ln -s $IMAGE "/home/mroik/Pictures/lock2.jpg"
 fi
-swaymsg reload
+
+if [[ $IS_LOCK == "no" ]]
+then
+	pkill swaybg
+	swaybg -o DVI-D-1 -i /home/mroik/Pictures/wallpaper.jpg -o HDMI-A-1 -i /home/mroik/Pictures/wallpaper2.jpg
+fi
