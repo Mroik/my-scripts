@@ -7,6 +7,7 @@ import re
 
 
 NEXTCLOUD = "nextcloud.cactusgroup.space"
+LITTERBOX = "litterbox"
 ALLOWED_CHARS = [chr(x) for x in range(65, 65 + 26)] + [chr(x) for x in range(97, 97 + 26)] + [chr(x) for x in range(48, 48 + 10)]
 
 
@@ -78,7 +79,7 @@ class Nextcloud:
 
     def upload_nextcloud(self, fd, name):
         resp = self.session.put(
-            f"https://{self.domain}/remote.php/webdav/{name}",
+            f"https://{self.domain}/remote.php/webdav/{LITTERBOX}/{name}",
             fd,
             headers={
                 "requesttoken": self.get_upload_token()
@@ -92,7 +93,7 @@ class Nextcloud:
             f"https://{self.domain}/ocs/v2.php/apps/files_sharing/api/v1/shares",
             json={
                 "attributes": "[]",
-                "path": f"/{name}",
+                "path": f"/{LITTERBOX}/{name}",
                 "shareType": 3
             },
             headers={
