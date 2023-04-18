@@ -132,7 +132,4 @@ if __name__ == "__main__":
         n.upload_nextcloud(open(args.file, "rb"), name)
         n.get_share_link(name)
     else:
-        if args.hash:
-            upload_catbox(args.file, args.hash)
-        else:
-            upload_catbox(args.file)
+        upload_catbox(args.file)
