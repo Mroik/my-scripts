@@ -2,6 +2,7 @@
 tail -n +5 "$0" | dmenu -i -l 20 | cut -d\  -f1 - | sed -z "s/\n//g" | wl-copy
 <<EOF
 
+🔝 Top
 😀 Grinning Face
 😃 Grinning Face with Big Eyes
 😄 Grinning Face with Smiling Eyes
@@ -12,6 +13,7 @@ tail -n +5 "$0" | dmenu -i -l 20 | cut -d\  -f1 - | sed -z "s/\n//g" | wl-copy
 😂 Face with Tears of Joy
 🙂 Slightly Smiling Face
 🙃 Upside-Down Face
+¯\_(ツ)_/¯ shrug
 🫠 Melting Face
 😉 Winking Face
 😊 Smiling Face with Smiling Eyes
@@ -1106,4 +1108,6 @@ tail -n +5 "$0" | dmenu -i -l 20 | cut -d\  -f1 - | sed -z "s/\n//g" | wl-copy
 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Flag: Wales
 🏴󠁵󠁳󠁴󠁸󠁿 Flag for Texas (US-TX)
 🏳‍🟧‍⬛‍🟧 Refugee Nation Flag
+🧢 Billed Cap
+🔥 Fire
 EOF
